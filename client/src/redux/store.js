@@ -1,17 +1,22 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import useReducer from "./user/userSlice.js";
-import { version } from "mongoose";
+import userReducer from "./user/userSlice.js";
+import { persistReducer, persistStore } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-const rootReducer = combineReducers({ user: useReducer });
+// Combina los reductores
+const rootReducer = combineReducers({ user: userReducer });
 
+// Configuración de persistencia
 const persistConfig = {
   key: "root",
   storage,
   version: 1,
 };
 
-const persistedReducer = persistReducer({ persistConfig, rootReducer });
+// Crear un reductor persistido
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
+// Configurar el store
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
@@ -20,4 +25,5 @@ export const store = configureStore({
     }),
 });
 
+// Crear el persistor
 export const persistor = persistStore(store);
