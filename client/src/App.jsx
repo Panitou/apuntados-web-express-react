@@ -10,6 +10,7 @@ import UpdateListing from "./pages/UpdateListing.jsx";
 import Listing from "./pages/Listing.jsx";
 import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
+import Search from "./pages/Search.jsx";
 
 export default function App() {
   return (
@@ -20,7 +21,9 @@ export default function App() {
         <Route path="/sign-in" element={<SignIn />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/search" element={<Search />} />
         <Route path="/listing/:listingId" element={<Listing />} />
+
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
           <Route path="/create-listing" element={<CreateListing />} />
