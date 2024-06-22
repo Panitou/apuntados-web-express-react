@@ -11,6 +11,7 @@ import Listing from "./pages/Listing.jsx";
 import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
 import Search from "./pages/Search.jsx";
+import Footer from "./pages/Footer.jsx";
 
 export default function App() {
   return (
