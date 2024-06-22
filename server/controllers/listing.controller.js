@@ -58,23 +58,33 @@ export const getListing = async (req, res, next) => {
     next(error);
   }
 };
+
 export const getListings = async (req, res, next) => {
   try {
-    const limit = parseInt(req.query.limit);
+    const limit = parseInt(req.query.limit) || 10; // Valor por defecto de 10 si limit no está definido
     const startIndex = parseInt(req.query.startIndex) || 0;
 
     const searchTerm = req.query.searchTerm || "";
+    const semester = req.query.semester || "";
     const sort = req.query.sort || "createdAt";
     const order = req.query.order || "desc";
 
-    const listings = await Listing.find({
-      name: { $regex: searchTerm, $options: "i" },
-      semester,
-      course,
-    })
-      .sort({ [sort]: order })
+    // Construir el objeto de búsqueda dinámicamente
+    const searchCriteria = {};
+    if (searchTerm) {
+      searchCriteria.name = { $regex: searchTerm, $options: "i" };
+    }
+    if (semester) {
+      searchCriteria.semester = semester;
+    }
+
+    const listings = await Listing.find(searchCriteria)
+      .sort({ [sort]: order === "desc" ? -1 : 1 })
       .limit(limit)
       .skip(startIndex);
+
     return res.status(200).json(listings);
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 };
