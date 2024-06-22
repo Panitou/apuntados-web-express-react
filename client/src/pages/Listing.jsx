@@ -14,6 +14,7 @@ import {
   FaParking,
   FaShare,
 } from "react-icons/fa";
+import { IconCertificate } from "@tabler/icons-react";
 
 // https://sabe.io/blog/javascript-format-numbers-commas#:~:text=The%20best%20way%20to%20format,format%20the%20number%20with%20commas.
 
@@ -50,7 +51,7 @@ export default function Listing() {
   }, [params.listingId]);
 
   return (
-    <main className="p-10 flex justify-center bg-orange-200 min-h-screen">
+    <main className="p-10 flex justify-center min-h-screen bg-[#09090B] items-center">
       {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
       {error && (
         <p className="text-center my-7 text-2xl">Something went wrong!</p>
@@ -90,31 +91,31 @@ export default function Listing() {
         </div>
       )}
       {listing && !loading && !error && (
-        <div className="flex flex-col max-w-4xl p-3 my-7 gap-4">
-          <p className="text-4xl font-semibold">{listing.name}</p>
-          <p className="flex items-center mt-6 gap-2 text-slate-600 text-sm">
-            <FaMapMarkerAlt className="text-green-700" />
+        <div className="flex flex-col max-w-4xl p-3 my-7 gap-4 mx-7">
+          <p className="text-4xl font-semibold text-white">{listing.name}</p>
+          <p className="flex items-center mt-2 gap-2 text-white text-sm">
+            <IconCertificate stroke={2} color="white" />
             {listing.course}
           </p>
-          <p className="text-slate-800">
-            <span className="font-semibold text-black">Description - </span>
-            {listing.description}
+          <p className="text-white h-8 w-full bg-white rounded-lg flex flex-col items-center justify-center">
+            <span className="font-semibold text-[#09090B]">Description: </span>
           </p>
-          <ul className="text-green-900 font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6">
-            <li className="flex items-center gap-1 whitespace-nowrap">
-              <FaBed className="text-lg" />
+          <p className="text-white">{listing.description}</p>
+          <ul className="text-[#09090B] font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6 mt-2">
+            <li className="flex items-center gap-1 whitespace-nowrap bg-[#E691B5] w-16 h-8 rounded-lg justify-center">
+              <span>Ciclo</span>
               {listing.semester}
             </li>
-            <li className="flex items-center gap-1 whitespace-nowrap">
-              <FaBath className="text-lg" />
+            <li className="flex items-center gap-1 whitespace-nowrap bg-[#E691B5] w-24 h-8 rounded-lg justify-center">
+              <span>Precio</span>
               {listing.price}
             </li>
           </ul>
           <button
             onClick={() => setContact(true)}
-            className="bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 p-3"
+            className="bg-[#FEC53B] text-[#09090B] font-bold rounded-lg uppercase hover:opacity-95 p-3"
           >
-            Contact landlord
+            Contactar
           </button>
         </div>
       )}

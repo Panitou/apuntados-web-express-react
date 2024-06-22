@@ -26,7 +26,7 @@ function Header() {
     }
   }, [location.search]);
   return (
-    <header className="">
+    <header className="bg-[#09090B] shadow-[#1d1d1d] shadow-md">
       <div className="font-inter flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <img src={Logo} alt="" className="w-auto h-10" />
@@ -72,7 +72,7 @@ function Header() {
                     color="white"
                     className="hover:text-white text-white/80 transition-colors"
                   />
-                  Login
+                  Iniciar Sesión
                 </li>
               </div>
             )}

@@ -94,26 +94,28 @@ function Search() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row font-semibold">
-      <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
+    <div className="flex flex-col md:flex-row font-semibold w-full font-inter min-h-screen bg-[#09090B]">
+      <div className="p-7 md:min-h-screen">
         <form onSubmit={handleSubmit} className="flex flex-col gap-8">
           <div className="flex items-center gap-2">
-            <label className="whitespace-nowrap">Search term:</label>
+            <label className="whitespace-nowrap text-white">
+              Buscar por término:
+            </label>
             <input
               id="searchTerm"
               type="text"
               placeholder="Buscar..."
-              className="border rounded-lg p-3 w-full"
+              className=" rounded-lg p-3 w-52"
               value={sidebardata.searchTerm}
               onChange={handleChange}
             />
           </div>
-          <div className="flex gap-2 flex-wrap items-center">
-            <label>Ciclo:</label>
+          <div className="flex gap-2 flex-wrap items-center rounded-lg">
+            <label className="text-white">Ciclo:</label>
             <div className="flex gap-2">
               <select
                 id="semester"
-                className="w-5"
+                className="w-15 h-10 text-center rounded-lg"
                 onChange={handleChange}
                 defaultValue={"I"}
               >
@@ -131,7 +133,7 @@ function Search() {
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <label>Orden:</label>
+            <label className="text-white">Orden:</label>
             <div className="flex gap-2">
               <select
                 id="sort_order"
@@ -139,25 +141,27 @@ function Search() {
                 onChange={handleChange}
                 defaultValue={"created_at_desc"}
               >
-                <option value="regularPrice_desc">Price high to low</option>
-                <option value="regularPrice_asc">Price low to hight</option>
+                {/* <option value="regularPrice_desc">
+                  Precio de mayor a menor
+                </option>
+                <option value="regularPrice_asc">
+                  Precio de menor a mayor
+                </option> */}
                 <option value="createdAt_desc">Latest</option>
                 <option value="regularPrice_desc">Oldest</option>
               </select>
             </div>
           </div>
-          <button className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95">
+          <button className="bg-[#FEC53B] text-[#09090B] font-bold p-3 rounded-lg uppercase hover:opacity-95">
             Aplicar filtros
           </button>
         </form>
       </div>
       <div className="">
-        <h1 className="text-3xl font-semibold border-b p-3 text-slate-700">
-          Listing results:
-        </h1>
+        <h1 className="text-3xl font-semibold text-white m-7">Resultados:</h1>
         <div className="p-7 flex flex-wrap gap-4">
           {!loading && listings.length === 0 && (
-            <p className="text-xl text-slate-700">No se encontraron apuntes</p>
+            <p className="text-xl text-white">No se encontraron apuntes</p>
           )}
           {loading && (
             <p className="text-xl text-slate-700 text-center w-full">

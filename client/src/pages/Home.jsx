@@ -16,8 +16,7 @@ function Home() {
           <br />
         </h1> */}
           <div className="text-[#7F7F80] text-2xl sm:text-[20px] text-center font-semibold w-[500px]">
-            Compra apuntes de diferentes personas y universidades, y vende y
-            gana una comisión por cada venta.
+            Compra y vende apuntes, y gana una comisión por cada venta.
           </div>
           <Link
             to={"/search"}
