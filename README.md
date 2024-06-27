@@ -1,6 +1,6 @@
-# UCV Virtual Apuntes
+# Apuntados - Web
 
-![UCV Virtual Apuntes](https://example.com/path-to-your-image.png) <!-- Reemplaza este enlace con la URL de tu imagen -->
+![Apuntados](https://user-images.githubusercontent.com/1561955/106762302-fda9de00-6635-11eb-99be-3ef744e60c0e.png) <!-- Reemplaza este enlace con la URL de tu imagen -->
 
 Bienvenido a **UCV Virtual Apuntes**, una plataforma diseñada para estudiantes de la Universidad César Vallejo en Perú, donde pueden comprar y vender resúmenes y apuntes universitarios. Nuestra misión es fomentar una comunidad académica colaborativa y solidaria.
 
