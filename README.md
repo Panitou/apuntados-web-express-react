@@ -1,31 +1,41 @@
-UCV Virtual Apuntes
-<img align="center" width="200" src="https://user-images.githubusercontent.com/1561955/106762302-fda9de00-6635-11eb-99be-3ef744e60c0e.png" />
+# UCV Virtual Apuntes
 
-Bienvenido a UCV Virtual Apuntes, una plataforma diseñada para estudiantes de la Universidad César Vallejo en Perú, donde pueden comprar y vender resúmenes y apuntes universitarios. Nuestra misión es fomentar una comunidad académica colaborativa y solidaria.
+![UCV Virtual Apuntes](https://example.com/path-to-your-image.png) <!-- Reemplaza este enlace con la URL de tu imagen -->
 
-🌐 Visita nuestro sitio web
-Características
-Compra y venta de resúmenes y apuntes universitarios.
-Sistema de calificación y comentarios para asegurar la calidad de los materiales.
-Gestión de perfiles de usuario con opciones para actualizar información personal y cargar fotos de perfil.
-Búsqueda avanzada de apuntes por carrera y asignatura.
-Interfaz intuitiva y fácil de usar.
-Tecnologías Utilizadas
-Frontend:
+Bienvenido a **UCV Virtual Apuntes**, una plataforma diseñada para estudiantes de la Universidad César Vallejo en Perú, donde pueden comprar y vender resúmenes y apuntes universitarios. Nuestra misión es fomentar una comunidad académica colaborativa y solidaria.
 
-React
-Redux
-React Router
-Tailwind CSS
-Backend:
+## 🌐 [Visita nuestro sitio web](https://ucvvirtual.edu.pe)
 
-Node.js
-Express
-MongoDB
-Autenticación:
+## Características
 
-Firebase Authentication
-JWT
-Almacenamiento de Archivos:
+- Compra y venta de resúmenes y apuntes universitarios.
+- Sistema de calificación y comentarios para asegurar la calidad de los materiales.
+- Gestión de perfiles de usuario con opciones para actualizar información personal y cargar fotos de perfil.
+- Búsqueda avanzada de apuntes por carrera y asignatura.
+- Interfaz intuitiva y fácil de usar.
 
-Firebase Storage
+## Tecnologías Utilizadas
+
+- **Frontend:**
+  - [React](https://reactjs.org/)
+  - [Redux](https://redux.js.org/)
+  - [React Router](https://reactrouter.com/)
+  - [Tailwind CSS](https://tailwindcss.com/)
+  
+- **Backend:**
+  - [Node.js](https://nodejs.org/)
+  - [Express](https://expressjs.com/)
+  - [MongoDB](https://www.mongodb.com/)
+  
+- **Autenticación:**
+  - [Firebase Authentication](https://firebase.google.com/products/auth)
+  - [JWT](https://jwt.io/)
+
+- **Almacenamiento de Archivos:**
+  - [Firebase Storage](https://firebase.google.com/products/storage)
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/ucv-virtual-apuntes.git
