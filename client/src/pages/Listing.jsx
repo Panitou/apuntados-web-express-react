@@ -100,7 +100,7 @@ export default function Listing() {
           <p className="text-white h-8 w-full bg-white rounded-lg flex flex-col items-center justify-center">
             <span className="font-semibold text-[#09090B]">Description: </span>
           </p>
-          <p className="text-white">{listing.description}</p>
+          <p className="text-white w-96 text-[12px]">{listing.description}</p>
           <ul className="text-[#09090B] font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6 mt-2">
             <li className="flex items-center gap-1 whitespace-nowrap bg-[#E691B5] w-16 h-8 rounded-lg justify-center">
               <span>Ciclo</span>

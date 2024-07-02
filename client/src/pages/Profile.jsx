@@ -212,13 +212,7 @@ export default function Profile() {
             className="border p-3 rounded-lg"
             onChange={handleChange}
           />
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={handleChange}
-            id="password"
-            className="border p-3 rounded-lg"
-          />
+          //--
           <button
             disabled={loading}
             className="bg-[#FEC53B] text-[#27272A] font-bold rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80"

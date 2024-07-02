@@ -22,12 +22,10 @@ function About() {
         futuro brillante.
       </p>
       <p className="mb-4">
-        <span className="font-bold">
-          Únete a Nosotros En UCV Virtual Apuntes
-        </span>
-        , estamos comprometidos con el éxito académico de nuestros estudiantes.
-        Únete a nuestra plataforma hoy y comienza a explorar, compartir y
-        aprender de una manera completamente nueva.
+        <span className="font-bold">Únete a ApuntaDos</span>, estamos
+        comprometidos con el éxito académico de nuestros estudiantes. Únete a
+        nuestra plataforma hoy y comienza a explorar, compartir y aprender de
+        una manera completamente nueva.
       </p>
     </div>
   );

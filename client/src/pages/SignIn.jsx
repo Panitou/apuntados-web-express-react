@@ -54,50 +54,11 @@ function SignIn() {
         <p className="text-[#A1A1AA] pb-3">
           Recuerda iniciar sesión con tu cuenta institucional
         </p>
-        {/* <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="email"
-            placeholder="Email"
-            className="border p-3 rounded-lg"
-            id="email"
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="border p-3 rounded-lg"
-            id="password"
-            onChange={handleChange}
-          />
-          <button
-            disabled={loading}
-            className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
-          >
-            {loading ? "Loading" : "Sign In"}
-          </button>
-          
-        </form> */}
+        //--
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <OAuth />
         </form>
-        {/* <div className="flex justify-center items-center flex-col text-white gap-2 mt-5">
-          <p>¿No tienes cuenta?</p>
-          <Link
-            className="focus:bg-accent rounded-lg bg-transparent p-2 text-black duration-300 hover:bg-gray-200 focus:outline-none dark:text-white hover:dark:bg-gray-800"
-            to="/sign-up"
-          >
-            <span className="hover:text-white text-white/80 transition-colors flex gap-2">
-              <IconLogin2
-                stroke={2}
-                color="white"
-                className="hover:text-white text-white/80 transition-colors"
-              />
-              Registrarme
-            </span>
-          </Link>
-        </div> */}
-
-        {/* {error && <p className="text-red-500 mt-5">{error}</p>} */}
+        //--
       </div>
     </div>
   );
