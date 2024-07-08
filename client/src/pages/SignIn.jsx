@@ -54,11 +54,9 @@ function SignIn() {
         <p className="text-[#A1A1AA] pb-3">
           Recuerda iniciar sesión con tu cuenta institucional
         </p>
-        //--
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <OAuth />
         </form>
-        //--
       </div>
     </div>
   );
